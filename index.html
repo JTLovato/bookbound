@@ -12,14 +12,15 @@
 
     <!--    Navigation   -->
 
-    <nav class="navbar navbar-light" style="background-color: #9b1b61;">
-        <img src="img/bookboundLogoGold.png" width="105" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9b1b61;">
+        <img src="img/bookboundLogoGold.png" width="105" height="30" class="d-inline-block align-top" alt="Main Logo" loading="lazy">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav">
-            <a class="nav-link active" href="#calendar-card">Meetings</a>
+            <a class="nav-link" href="#calendar-card">Meetings</a>
             <a class="nav-link" href="#chat">Chat</a>
             <a class="nav-link" href="#meetup">Meetup</a>
             <a class="nav-link" href="#charity">Charity</a>
@@ -28,42 +29,51 @@
             <a class="nav-link" href="#staff">Staff</a>
           </div>
         </div>
-    </nav>
+      </nav>
 
     <!--    Carousel  For Desktop  -->
     <div id="carouselHold" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselHold" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselHold" data-slide-to="1"></li>
+            <li data-target="#carouselHold" data-slide-to="2"></li>
+            <li data-target="#carouselHold" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-toggle="modal" data-target="#modal1">
                <img src="img/book1.jpg" class="d-block w-100" alt="Image: The Great Gatsby Cover">
             <div class="carousel-caption d-md-block">
-               <h1>The Great Gatsby</h1>
-               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <p class="monthly-book-mobile">Book Of The Month</p>
+                <h1>The Great Gatsby</h1>
+                <a href="https://fscottfitzgeraldsociety.org/" target="_blank" class="author-mobile">By Scott Fitzgerald</a><br>
+                <p class="sub-caption">The classic story that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922.</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-toggle="modal" data-target="#modal2">
             <img src="img/book2.jpg" class="d-block w-100" alt="Image: Little Fires Everywhere Cover">
             <div class="carousel-caption d-md-block">
-               <h1>Little Fires Everywhere</h1>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="monthly-book-mobile">Next Month's Book</p>
+                <h1>Little Fires Everywhere</h1>
+                <a href="https://www.celesteng.com/" target="_blank" class="author-mobile">By Celeste Ng</a><br>
+                <p class="sub-caption">The classic story that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922.</p>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-toggle="modal" data-target="#modal3">
             <img src="img/book3.jpg" class="d-block w-100" alt="Image: The Burning Cover">
             <div class="carousel-caption d-md-block">
-                <h1>The Burning</h1>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <p class="monthly-book-mobile">Last Month's Book</p>
+                <h1>A Burning</h1>
+                <a href="https://www.meghamajumdar.com/" target="_blank" class="author-mobile">By Megha Majumdar</a><br>
+                <p class="sub-caption">The classic story that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922.</p>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="img/book4.jpg" class="d-block w-100" alt="Image: The Burning Cover">
+        <div class="carousel-item" data-toggle="modal" data-target="#modal4">
+            <img src="img/book4.jpg" class="d-block w-100" alt="Image: Where The Sidewalk Ends Cover">
             <div class="carousel-caption d-md-block">
-                <h1>Where The Sidewalk Ends</h1>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <p class="monthly-book-mobile">For The Kids</p>
+                <h1>One Fish Two Fish Red Fish Blue Fish</h1>
+                <a href="http://www.shelsilverstein.com/" target="_blank" class="author-mobile">By Dr. Seuss</a><br>
+                <p class="sub-caption">The classic story that follows a cast of characters living in the fictional towns of West Egg and East Egg on prosperous Long Island in the summer of 1922.</p>
             </div>
         </div>
         </div>
@@ -129,270 +139,322 @@
         </a>
     </div>
 
-    <!--    Calendar    -->
-
-    <div class="card calendar-card" id="calendar-card">
-        <h3 class="card-header calendar-header" id="monthAndYear">-</h3>
-        <table class="table table-bordered table-responsive-sm" id="calendar">
-            <thead>
-            <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-            </tr>
-            </thead>
-            <tbody id="calendar-body">
-            </tbody>
-        </table>
-        <div class="modal fade calendar-popup" id="test" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="calendar-modal-content">
-                <div class="calendar-modal-header">
-                    <p>Meetup with other members!</p>
+    <div class="card-hold">
+        <!--    Calendar    -->
+        <div class="card calendar-card" id="calendar-card">
+            <h3 class="card-header calendar-header" id="monthAndYear">-</h3>
+            <table class="table table-bordered table-responsive-sm" id="calendar">
+                <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                </thead>
+                <tbody id="calendar-body">
+                </tbody>
+            </table>
+            <div class="modal fade calendar-popup" id="test" tabindex="-1" aria-labelledby="meetupModal" aria-hidden="true">
+                <div class="calendar-modal-content">
+                    <div class="calendar-modal-header">
+                        <p id="meetupModal">Meetup with other members!</p>
+                    </div>
+                    <img class="local-library" src="img/library.jpg" alt="Your Local Library">
+                    <p id="next-meeting"></p>
+                    <button type="button" id="calendar-modal-close" class="btn calendar-modal-close">Close</button>
                 </div>
-                <img class="local-library" src="img/library.jpg">
-                <p id="next-meeting"></p>
-                <button type="button" id="calendar-modal-close" class="btn calendar-modal-close">Close</button>
+                <div class="calendar-modal-bg"></div>
             </div>
-            <div class="calendar-modal-bg"></div>
+            <div class="legend">
+                <span class="gold-legend"></span>
+                <p>= Today's Date</p>
+                <span class="purple-legend"></span>
+                <p>= Next Meeting</p>
+            </div>
+            <div class="form-inline previous-next-hold">    
+                <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Previous</button>
+                <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
+            </div>
+            <br/>
+            <form class="form-inline jump-to">
+                <label class="lead mr-2 ml-2" for="month" id="jumpTo">Jump To: </label>
+                <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                    <option value=0>Jan</option>
+                    <option value=1>Feb</option>
+                    <option value=2>Mar</option>
+                    <option value=3>Apr</option>
+                    <option value=4>May</option>
+                    <option value=5>Jun</option>
+                    <option value=6>Jul</option>
+                    <option value=7>Aug</option>
+                    <option value=8>Sep</option>
+                    <option value=9>Oct</option>
+                    <option value=10>Nov</option>
+                    <option value=11>Dec</option>
+                </select>
+                <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+                <option value=1990>1990</option>
+                <option value=1991>1991</option>
+                <option value=1992>1992</option>
+                <option value=1993>1993</option>
+                <option value=1994>1994</option>
+                <option value=1995>1995</option>
+                <option value=1996>1996</option>
+                <option value=1997>1997</option>
+                <option value=1998>1998</option>
+                <option value=1999>1999</option>
+                <option value=2000>2000</option>
+                <option value=2001>2001</option>
+                <option value=2002>2002</option>
+                <option value=2003>2003</option>
+                <option value=2004>2004</option>
+                <option value=2005>2005</option>
+                <option value=2006>2006</option>
+                <option value=2007>2007</option>
+                <option value=2008>2008</option>
+                <option value=2009>2009</option>
+                <option value=2010>2010</option>
+                <option value=2011>2011</option>
+                <option value=2012>2012</option>
+                <option value=2013>2013</option>
+                <option value=2014>2014</option>
+                <option value=2015>2015</option>
+                <option value=2016>2016</option>
+                <option value=2017>2017</option>
+                <option value=2018>2018</option>
+                <option value=2019>2019</option>
+                <option value=2020>2020</option>
+                <option value=2021>2021</option>
+                <option value=2022>2022</option>
+                <option value=2023>2023</option>
+                <option value=2024>2024</option>
+                <option value=2025>2025</option>
+                <option value=2026>2026</option>
+                <option value=2027>2027</option>
+                <option value=2028>2028</option>
+                <option value=2029>2029</option>
+                <option value=2030>2030</option>
+            </select></form>
         </div>
-        <div class="legend">
-            <span class="gold-legend"></span>
-            <p>= Today's Date</p>
-            <span class="purple-legend"></span>
-            <p>= Next Meeting</p>
-        </div>
-        <div class="form-inline previous-next-hold">    
-            <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Previous</button>
-            <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
-        </div>
-        <br/>
-        <form class="form-inline jump-to">
-            <label class="lead mr-2 ml-2" for="month" id="jumpTo">Jump To: </label>
-            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
-                <option value=0>Jan</option>
-                <option value=1>Feb</option>
-                <option value=2>Mar</option>
-                <option value=3>Apr</option>
-                <option value=4>May</option>
-                <option value=5>Jun</option>
-                <option value=6>Jul</option>
-                <option value=7>Aug</option>
-                <option value=8>Sep</option>
-                <option value=9>Oct</option>
-                <option value=10>Nov</option>
-                <option value=11>Dec</option>
-            </select>
-            <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
-            <option value=1990>1990</option>
-            <option value=1991>1991</option>
-            <option value=1992>1992</option>
-            <option value=1993>1993</option>
-            <option value=1994>1994</option>
-            <option value=1995>1995</option>
-            <option value=1996>1996</option>
-            <option value=1997>1997</option>
-            <option value=1998>1998</option>
-            <option value=1999>1999</option>
-            <option value=2000>2000</option>
-            <option value=2001>2001</option>
-            <option value=2002>2002</option>
-            <option value=2003>2003</option>
-            <option value=2004>2004</option>
-            <option value=2005>2005</option>
-            <option value=2006>2006</option>
-            <option value=2007>2007</option>
-            <option value=2008>2008</option>
-            <option value=2009>2009</option>
-            <option value=2010>2010</option>
-            <option value=2011>2011</option>
-            <option value=2012>2012</option>
-            <option value=2013>2013</option>
-            <option value=2014>2014</option>
-            <option value=2015>2015</option>
-            <option value=2016>2016</option>
-            <option value=2017>2017</option>
-            <option value=2018>2018</option>
-            <option value=2019>2019</option>
-            <option value=2020>2020</option>
-            <option value=2021>2021</option>
-            <option value=2022>2022</option>
-            <option value=2023>2023</option>
-            <option value=2024>2024</option>
-            <option value=2025>2025</option>
-            <option value=2026>2026</option>
-            <option value=2027>2027</option>
-            <option value=2028>2028</option>
-            <option value=2029>2029</option>
-            <option value=2030>2030</option>
-        </select></form>
-    </div>
 
-    <!--    Chat Box     -->
-    <div id="chat" class="card">
-        <div class="card-header">
-            <p>Chat About This Month's Book</p>
+        <!--    Chat Box     -->
+        <div id="chat" class="card">
+            <div class="card-header" id="chat-header">
+                <p>Chat About This Month's Book</p>
+            </div>
+            <div class="chat-hold modal-dialog-scrollable">
+                <div class="members-count">-</div>
+                <div class="members-list">-</div>
+                <div class="messages"></div>
+                <form class="message-form" onsubmit="return false;">
+                    <input class="message-form_input" placeholder="Type a message.." type="text"/>
+                    <input class="message-form_button" value="Send" type="submit"/>
+                </form>
+            </div>
         </div>
-        <div class="chat-hold modal-dialog-scrollable">
-            <div class="members-count">-</div>
-            <div class="members-list">-</div>
-            <div class="messages"></div>
-            <form class="message-form" onsubmit="return false;">
-                <input class="message-form_input" placeholder="Type a message.." type="text"/>
-                <input class="message-form_button" value="Send" type="submit"/>
+
+        <!--    Map Section     -->
+        <div id="meetup" class="card map-card">
+            <div class="card-header" id="map-header">
+                <p>Locate Your Local Bookbound Club</p>
+            </div>
+            <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1FGc_LjC3Ewhlr_1LomBN6wFGVbxwsoMd" width="640" height="480"></iframe>
+        </div>
+
+        <!--    Charitible Section    -->
+        <div id="charity" class="card">
+            <div class="card-header" id="charity-header">
+                <p>Charitable Contributions</p>
+            </div>
+            <img src="img/littleLibrary.jpg" class="little-library" alt="Picture of a Little Free Library">
+            <figcaption>Volunteer Janet Unveiling New Little Free Library</figcaption>
+            <p class="little-library-text">Did you know the Little Free Library movement has added over 100,000 little libraries across the world?</p>
+            <a class="charity-link" href="https://littlefreelibrary.org/" target="_blank">Find Out More Here!</a>
+        </div>
+
+        <!--    Sign Up Section    -->
+        <div id="signup" class="card">
+            <div class="card-header" id="signup-header">
+                <p>Sign Up For Our Emails!</p>
+            </div>
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nameVal" class="form-labels">Your Name</label>
+                        <input type="text" class="form-control" id="nameVal" value="" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Try Again
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="emailVal" class="form-labels">Your Email</label>
+                        <input type="text" class="form-control" id="emailVal" value="" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Invalid Email
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        <a href="https://www.termsfeed.com/public/uploads/2019/04/terms-and-conditions-template.pdf" target="_blank">Agree to terms and conditions</a>
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary signup" type="submit">Submit form</button>
             </form>
         </div>
-    </div>
 
-    <!--    Map Section     -->
-    <div id="meetup" class="card map-card">
-        <div class="card-header">
-            <p>Locate Your Local Bookbound Club</p>
-        </div>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1FGc_LjC3Ewhlr_1LomBN6wFGVbxwsoMd"></iframe>
-    </div>
-
-    <!--    Charitible Section    -->
-    <div id="charity" class="card">
-        <div class="card-header">
-            <p>Charitable Contributions</p>
-        </div>
-        <img src="img/littleLibrary.jpg" class="little-library">
-        <figcaption>Volunteer Janet Unveiling New Little Free Library</figcaption>
-        <p class="little-library-text">Did you know the Little Free Library movement has added over 100,000 little libraries across the world?</p>
-        <a class="charity-link" href="https://littlefreelibrary.org/" target="_blank">Find Out More Here!</a>
-    </div>
-
-    <!--    Sign Up Section    -->
-    <div id="signup" class="card">
-        <div class="card-header">
-            <p>Sign Up For Our Emails!</p>
-        </div>
-        <form class="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="nameVal" class="form-labels">Your Name</label>
-                    <input type="text" class="form-control" id="nameVal" value="" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Try Again
-                    </div>
+        <!--      Contact Me     -->
+        <div id="contact" class="card">
+            <div class="card-header" id="contact-header">
+                <p>Contact Me!</p>
+            </div>
+            <div class="contact-hold">
+                <p>Reach out</p>
+                <div class="media-links">
+                    <a class="twitter" href="https://twitter.com/johntlovato"></a>
+                    <a class="github" href="https://github.com/JTLovato"></a>
+                    <a class="linkedin" href="https://www.linkedin.com/in/john-lovato-4295b3199/"></a>
+                </div>
+                <p>Check Out My Other Sites</p>
+                <div class="design-links">
+                    <a class="design-link mask" href="https://jtlovato.github.io/GoalieMaskProject.com/"><img src="img/mask.png" alt="mask icon"/></a>
+                    <a class="design-link bar" href="https://jtlovato.github.io/ZeroGBar/"><img src="img/planet.png" alt="Planet icon" /></a>
+                    <a class="design-link home" href="https://jtlovato.github.io/"><img src="img/jtl.png" alt="Home icon" /></a>
+                    <a class="design-link honee" href="https://jtlovato.github.io/Honee/"><img src="img/honee.png" alt="Honee icon" /></a>
+                    <a class="design-link cover" href="https://jtlovato.github.io/CoverApp/"><img src="img/cover.png" alt="Honee icon" /></a>
+                </div>
+                <div class="email-links">
+                    <a href="mailto:jtlovato@gmail.com">Shoot Me An Email</a>
+                    <a href="resume.pdf" target="_blank">Check Out My Resume</a>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="emailVal" class="form-labels">Your Email</label>
-                    <input type="text" class="form-control" id="emailVal" value="" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Invalid Email
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                    <a href="https://www.termsfeed.com/public/uploads/2019/04/terms-and-conditions-template.pdf" target="_blank">Agree to terms and conditions</a>
-                </label>
-                <div class="invalid-feedback">
-                    You must agree before submitting.
-                </div>
-                </div>
-            </div>
-            <button class="btn btn-primary signup" type="submit">Submit form</button>
-        </form>
-    </div>
-
-    <!--      Contact Me     -->
-    <div id="contact" class="card">
-        <div class="card-header">
-            <p>Contact Me!</p>
-        </div>
-        <div class="contact-hold">
-            <p>Reach out</p>
-            <div class="media-links">
-                <a class="twitter" href="https://twitter.com/johntlovato"></a>
-                <a class="github" href="https://github.com/JTLovato"></a>
-                <a class="linkedin" href="https://www.linkedin.com/in/john-lovato-4295b3199/"></a>
-            </div>
-            <p>Check Out My Other Sites</p>
-            <div class="design-links">
-                <a class="design-link mask" href="https://jtlovato.github.io/GoalieMaskProject.com/"><img src="img/mask.png" /></a>
-                <a class="design-link bar" href="https://jtlovato.github.io/ZeroGBar/"><img src="img/planet.png" /></a>
-                <a class="design-link home" href="https://jtlovato.github.io/"><img src="img/jtl.png" /></a>
-                <a class="design-link honee" href="https://jtlovato.github.io/Honee/"><img src="img/honee.png" /></a>
-                <a class="design-link cover" href="https://jtlovato.github.io/CoverApp/"><img src="img/cover.png" /></a>
-            </div>
-            <div class="email-links">
-                <a href="mailto: jtlovato@gmail.com">Shoot Me An Email</a>
-                <a href="resume.pdf" target="_blank">Check Out My Resume</a>
-            </div>
-
         </div>
     </div>
 
     <!--   Staff   -->
-    <div id="staff" class="carousel slide" data-ride="carousel">
+    <!-- Mobile Staff -->
+    <div id="staff" class="carousel slide staff-mobile" data-ride="carousel">
         <h5 class="staff-greet">Meet Your Bookbound Staff</h5>
         <ol class="carousel-indicators bottom-staff-dots">
             <li data-target="#staff" data-slide-to="0" class="active"></li>
             <li data-target="#staff" data-slide-to="1"></li>
             <li data-target="#staff" data-slide-to="2"></li>
+            <li data-target="#staff" data-slide-to="3"></li>
+            <li data-target="#staff" data-slide-to="4"></li>
+            <li data-target="#staff" data-slide-to="5"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="staff-hold">
                     <div class="staff-img-hold">
-                        <img src="img/staff/ann.jpg" />
-                        <img src="img/staff/britt.jpg" />
-                        <img src="img/staff/charlie.jpg" />
-                        <img src="img/staff/cole.jpg" />
+                        <img src="img/staff/amanda.jpg" alt="Amanda" />
+                        <img src="img/staff/ann.jpg" alt="Ann" />
+                        <img src="img/staff/britt.jpg" alt="Britt" />
+                        <img src="img/staff/charlie.jpg" alt="Charlie" />
                     </div>
                     <div class="staff-name-hold">
+                        <p class="staff-name">Amanda</p>
                         <p class="staff-name">Ann</p>
                         <p class="staff-name">Britt</p>
                         <p class="staff-name">Charlie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="staff-hold">
+                    <div class="staff-img-hold">
+                        <img src="img/staff/cole.jpg" alt="Cole" />
+                        <img src="img/staff/dan.jpg" alt="Dan" />
+                        <img src="img/staff/devonte.jpg" alt="Devonte" />
+                        <img src="img/staff/gabe.jpg" alt="gabe" />
+                    </div>
+                    <div class="staff-name-hold">
                         <p class="staff-name">Cole</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="staff-hold">
-                    <div class="staff-img-hold">
-                        <img src="img/staff/dan.jpg" />
-                        <img src="img/staff/greg.jpg" />
-                        <img src="img/staff/michelle.jpg" />
-                        <img src="img/staff/mike.jpg" />
-                    </div>
-                    <div class="staff-name-hold">
                         <p class="staff-name">Dan</p>
-                        <p class="staff-name">Greg</p>
-                        <p class="staff-name">Michelle</p>
-                        <p class="staff-name">Mike</p>
+                        <p class="staff-name">Devonte</p>
+                        <p class="staff-name">Gabe</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="staff-hold">
                     <div class="staff-img-hold">
-                        <img src="img/staff/pat.jpg" />
-                        <img src="img/staff/sam.jpg" />
-                        <img src="img/staff/sarah.jpg" />
-                        <img src="img/staff/tara.jpg" />
+                        <img src="img/staff/greg.jpg" alt="Greg" />
+                        <img src="img/staff/henrik.jpg" alt="Henrik" />
+                        <img src="img/staff/jan.jpg" alt="Jan" />
+                        <img src="img/staff/jasond.jpg" alt="Jason D" />
                     </div>
                     <div class="staff-name-hold">
+                        <p class="staff-name">Greg</p>
+                        <p class="staff-name">Henrik</p>
+                        <p class="staff-name">Jan</p>
+                        <p class="staff-name">Jason D</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="staff-hold">
+                    <div class="staff-img-hold">
+                        <img src="img/staff/jasong.jpg" alt="Jason G" />
+                        <img src="img/staff/jennifer.jpg" alt="Jennifer" />
+                        <img src="img/staff/madison.jpg" alt="Madison" />
+                        <img src="img/staff/michelle.jpg" alt="Michelle" />
+                    </div>
+                    <div class="staff-name-hold">
+                        <p class="staff-name">Jason G</p>
+                        <p class="staff-name">Jennifer</p>
+                        <p class="staff-name">Madison</p>
+                        <p class="staff-name">Michelle</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="staff-hold">
+                    <div class="staff-img-hold">
+                        <img src="img/staff/mike.jpg" alt="Mike" />
+                        <img src="img/staff/nate.jpg" alt="Nate" />
+                        <img src="img/staff/pat.jpg" alt="Pat" />
+                        <img src="img/staff/phil.jpg" alt="Phil" />
+                    </div>
+                    <div class="staff-name-hold">
+                        <p class="staff-name">Mike</p>
+                        <p class="staff-name">Nate</p>
                         <p class="staff-name">Pat</p>
+                        <p class="staff-name">Phil</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="staff-hold">
+                    <div class="staff-img-hold">
+                        <img src="img/staff/sam.jpg" alt="Sam" />
+                        <img src="img/staff/sarah.jpg" alt="Sarah" />
+                        <img src="img/staff/tara.jpg" alt="Tara" />
+                        <img src="img/staff/wade.jpg" alt="Wade" />
+                    </div>
+                    <div class="staff-name-hold">
                         <p class="staff-name">Sam</p>
                         <p class="staff-name">Sarah</p>
                         <p class="staff-name">Tara</p>
+                        <p class="staff-name">Wade</p>
                     </div>
                 </div>
             </div>
@@ -402,6 +464,96 @@
           <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#staff" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Desktop Staff -->
+    <div id="staffDesktop" class="carousel slide staff-desktop" data-ride="carousel">
+        <h5 class="staff-greet">Meet Your Bookbound Staff</h5>
+        <ol class="carousel-indicators bottom-staff-dots">
+            <li data-target="#staffDesktop" data-slide-to="0" class="active"></li>
+            <li data-target="#staffDesktop" data-slide-to="1"></li>
+            <li data-target="#staffDesktop" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="staff-hold">
+                    <div class="staff-img-hold">
+                        <img src="img/staff/amanda.jpg" alt="Amanda" />
+                        <img src="img/staff/ann.jpg" alt="Ann" />
+                        <img src="img/staff/britt.jpg" alt="Britt" />
+                        <img src="img/staff/charlie.jpg" alt="Charlie" />
+                        <img src="img/staff/cole.jpg" alt="Cole" />
+                        <img src="img/staff/dan.jpg" alt="Dan" />
+                        <img src="img/staff/devonte.jpg" alt="Devonte" />
+                    </div>
+                    <div class="staff-name-hold">
+                        <p class="staff-name">Amanda</p>
+                        <p class="staff-name">Ann</p>
+                        <p class="staff-name">Britt</p>
+                        <p class="staff-name">Charlie</p>
+                        <p class="staff-name">Cole</p>
+                        <p class="staff-name">Dan</p>
+                        <p class="staff-name">Devonte</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="staff-hold">
+                    <div class="staff-img-hold">
+                        <img src="img/staff/greg.jpg" alt="Greg" />
+                        <img src="img/staff/henrik.jpg" alt="Henrik" />
+                        <img src="img/staff/jan.jpg" alt="Jan" />
+                        <img src="img/staff/jasond.jpg" alt="Jason D" />
+                        <img src="img/staff/jasong.jpg" alt="Jason G" />
+                        <img src="img/staff/jennifer.jpg" alt="Jennifer" />
+                        <img src="img/staff/madison.jpg" alt="Madison" />
+                        <img src="img/staff/michelle.jpg" alt="Michelle" />
+                    </div>
+                    <div class="staff-name-hold">
+                        <p class="staff-name">Greg</p>
+                        <p class="staff-name">Henrik</p>
+                        <p class="staff-name">Jan</p>
+                        <p class="staff-name">Jason D</p>
+                        <p class="staff-name">Jason G</p>
+                        <p class="staff-name">Jennifer</p>
+                        <p class="staff-name">Madison</p>
+                        <p class="staff-name">Michelle</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="staff-hold">
+                    <div class="staff-img-hold">
+                        <img src="img/staff/mike.jpg" alt="Mike" />
+                        <img src="img/staff/nate.jpg" alt="Nate" />
+                        <img src="img/staff/pat.jpg" alt="Pat" />
+                        <img src="img/staff/phil.jpg" alt="Phil" />
+                        <img src="img/staff/sam.jpg" alt="Sam" />
+                        <img src="img/staff/sarah.jpg" alt="Sarah" />
+                        <img src="img/staff/tara.jpg" alt="Tara" />
+                        <img src="img/staff/wade.jpg" alt="Wade" />
+                    </div>
+                    <div class="staff-name-hold">
+                        <p class="staff-name">Mike</p>
+                        <p class="staff-name">Nate</p>
+                        <p class="staff-name">Pat</p>
+                        <p class="staff-name">Phil</p>
+                        <p class="staff-name">Sam</p>
+                        <p class="staff-name">Sarah</p>
+                        <p class="staff-name">Tara</p>
+                        <p class="staff-name">Wade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#staffDesktop" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#staffDesktop" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -422,16 +574,16 @@
             <div class="modal-body">
                 <p>By: F. Scott Fitzgerald</p>
                 <div class="modal-float">
-                    <img src="img/greatGatsby.jpg">
+                    <img src="img/greatGatsby.jpg"  alt="Great Gatbsy Cover" >
                     <p>The Great Gatsby, third novel by F. Scott Fitzgerald, published in 1925 by Charles Scribner’s Sons. Set in Jazz Age New York, the novel tells the tragic story of Jay Gatsby, a self-made millionaire, and his pursuit of Daisy Buchanan, a wealthy young woman whom he loved in his youth. Unsuccessful upon publication, the book is now considered a classic of American fiction and has often been called the Great American Novel.</p>
                     <div class="book-rating">
                         <p>Did You Read The Book? Tell Us What You Think!</p>
                         <ul class="rate-area">
-                            <input type="radio" id="5-star" name="rating" value="5" /><label for="5-star" title="Amazing">5 stars</label>
-                            <input type="radio" id="4-star" name="rating" value="4" /><label for="4-star" title="Good">4 stars</label>
-                            <input type="radio" id="3-star" name="rating" value="3" /><label for="3-star" title="Average">3 stars</label>
-                            <input type="radio" id="2-star" name="rating" value="2" /><label for="2-star" title="Not Good">2 stars</label>
-                            <input type="radio" id="1-star" name="rating" value="1" /><label for="1-star" title="Bad">1 star</label>
+                            <input type="radio" id="5-star1" name="rating" value="5" /><label for="5-star1" title="Amazing">5 stars</label>
+                            <input type="radio" id="4-star1" name="rating" value="4" /><label for="4-star1" title="Good">4 stars</label>
+                            <input type="radio" id="3-star1" name="rating" value="3" /><label for="3-star1" title="Average">3 stars</label>
+                            <input type="radio" id="2-star1" name="rating" value="2" /><label for="2-star1" title="Not Good">2 stars</label>
+                            <input type="radio" id="1-star1" name="rating" value="1" /><label for="1-star1" title="Bad">1 star</label>
                         </ul>
                     </div>
                     <div class="purchase-hold">
@@ -444,7 +596,7 @@
                     </div>
                     <div class="close-btn">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
-                            <p>Close</p>
+                            Close
                         </button>
                     </div>
                 </div>
@@ -464,16 +616,16 @@
             <div class="modal-body">
                 <p>By: Celeste Ng</p>
                 <div class="modal-float">
-                    <img src="img/littleFiresEverywhere.jpg">
+                    <img src="img/littleFiresEverywhere.jpg" alt="Little Fires Everywhere Cover" >
                     <p>Little Fires Everywhere is the latest novel from bestelling author, Celeste Ng. Set in Shaker Heights, Ohio, Little Fires Everywhere tells the story of Elena Richardson, a woman who thrives on structure and rules, and her family. When Mia Warren, an artist who has been living a nomadic lifestyle as a single mother with her daughter, Pearl, arrives in town, it threatens everything that Mrs. Richardson has known. Slowly, Mia becomes the enemy of Mrs. Richardson. Meanwhile, in another part of town, close friends of the Richardsons have adopted a Chinese-American baby, which results in a custody battle. When a fire breaks out in the Richardson home, the town is buzzing with their ideas on who the suspect is.</p>
                     <div class="book-rating">
                         <p>Did You Read The Book? Tell Us What You Think!</p>
                         <ul class="rate-area">
-                            <input type="radio" id="5-star" name="rating" value="5" /><label for="5-star" title="Amazing">5 stars</label>
-                            <input type="radio" id="4-star" name="rating" value="4" /><label for="4-star" title="Good">4 stars</label>
-                            <input type="radio" id="3-star" name="rating" value="3" /><label for="3-star" title="Average">3 stars</label>
-                            <input type="radio" id="2-star" name="rating" value="2" /><label for="2-star" title="Not Good">2 stars</label>
-                            <input type="radio" id="1-star" name="rating" value="1" /><label for="1-star" title="Bad">1 star</label>
+                            <input type="radio" id="5-star2" name="rating" value="5" /><label for="5-star2" title="Amazing">5 stars</label>
+                            <input type="radio" id="4-star2" name="rating" value="4" /><label for="4-star2" title="Good">4 stars</label>
+                            <input type="radio" id="3-star2" name="rating" value="3" /><label for="3-star2" title="Average">3 stars</label>
+                            <input type="radio" id="2-star2" name="rating" value="2" /><label for="2-star2" title="Not Good">2 stars</label>
+                            <input type="radio" id="1-star2" name="rating" value="1" /><label for="1-star2" title="Bad">1 star</label>
                         </ul>
                     </div>
                     <div class="purchase-hold">
@@ -486,7 +638,7 @@
                     </div>
                     <div class="close-btn">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
-                            <p>Close</p>
+                            Close
                         </button>
                     </div>
                 </div>
@@ -505,16 +657,16 @@
             <div class="modal-body">
                 <p>By: Megha Majumdar</p>
                 <div class="modal-float">
-                    <img src="img/aBurning.jpg">
+                    <img src="img/aBurning.jpg"  alt="A Burning Cover" >
                     <p>Jivan is a Muslim girl from the slums, determined to move up in life, who is accused of executing a terrorist attack on a train because of a careless comment on Facebook. PT Sir is an opportunistic gym teacher who hitches his aspirations to a right-wing political party, and finds that his own ascent becomes linked to Jivan's fall. Lovely—an irresistible outcast whose exuberant voice and dreams of glory fill the novel with warmth and hope and humor—has the alibi that can set Jivan free, but it will cost her everything she holds dear.</p>
                     <div class="book-rating">
                         <p>Did You Read The Book? Tell Us What You Think!</p>
                         <ul class="rate-area">
-                            <input type="radio" id="5-star" name="rating" value="5" /><label for="5-star" title="Amazing">5 stars</label>
-                            <input type="radio" id="4-star" name="rating" value="4" /><label for="4-star" title="Good">4 stars</label>
-                            <input type="radio" id="3-star" name="rating" value="3" /><label for="3-star" title="Average">3 stars</label>
-                            <input type="radio" id="2-star" name="rating" value="2" /><label for="2-star" title="Not Good">2 stars</label>
-                            <input type="radio" id="1-star" name="rating" value="1" /><label for="1-star" title="Bad">1 star</label>
+                            <input type="radio" id="5-star3" name="rating" value="5" /><label for="5-star3" title="Amazing">5 stars</label>
+                            <input type="radio" id="4-star3" name="rating" value="4" /><label for="4-star3" title="Good">4 stars</label>
+                            <input type="radio" id="3-star3" name="rating" value="3" /><label for="3-star3" title="Average">3 stars</label>
+                            <input type="radio" id="2-star3" name="rating" value="2" /><label for="2-star3" title="Not Good">2 stars</label>
+                            <input type="radio" id="1-star3" name="rating" value="1" /><label for="1-star3" title="Bad">1 star</label>
                         </ul>
                     </div>
                     <div class="purchase-hold">
@@ -527,7 +679,7 @@
                     </div>
                     <div class="close-btn">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">
-                            <p>Close</p>
+                            Close
                         </button>
                     </div>
                 </div>
@@ -546,16 +698,16 @@
             <div class="modal-body">
                 <p>By: Dr. Seuss</p>
                 <div class="modal-float">
-                    <img src="img/oneFishTwoFishRedFishBlueFish.jpg">
+                    <img src="img/oneFishTwoFishRedFishBlueFish.jpg"  alt="One Fish Two Fish Red Fish Blue Fish Cover" >
                     <p>From counting to opposites to Dr. Seuss's signature silly rhymes, this book has everything a beginning reader needs! Meet the bumpy Wump and the singing Ying, and even the winking Yink who drinks pink ink. The silly rhymes and colorful cast of characters will have every child giggling from morning to night.</p>
                     <div class="book-rating">
                         <p>Did You Read The Book? Tell Us What You Think!</p>
                         <ul class="rate-area">
-                            <input type="radio" id="5-star" name="rating" value="5" /><label for="5-star" title="Amazing">5 stars</label>
-                            <input type="radio" id="4-star" name="rating" value="4" /><label for="4-star" title="Good">4 stars</label>
-                            <input type="radio" id="3-star" name="rating" value="3" /><label for="3-star" title="Average">3 stars</label>
-                            <input type="radio" id="2-star" name="rating" value="2" /><label for="2-star" title="Not Good">2 stars</label>
-                            <input type="radio" id="1-star" name="rating" value="1" /><label for="1-star" title="Bad">1 star</label>
+                            <input type="radio" id="5-star4" name="rating" value="5" /><label for="5-star4" title="Amazing">5 stars</label>
+                            <input type="radio" id="4-star4" name="rating" value="4" /><label for="4-star4" title="Good">4 stars</label>
+                            <input type="radio" id="3-star4" name="rating" value="3" /><label for="3-star4" title="Average">3 stars</label>
+                            <input type="radio" id="2-star4" name="rating" value="2" /><label for="2-star4" title="Not Good">2 stars</label>
+                            <input type="radio" id="1-star4" name="rating" value="1" /><label for="1-star4" title="Bad">1 star</label>
                         </ul>
                     </div>
                     <div class="purchase-hold">
@@ -568,7 +720,7 @@
                     </div>
                     <div class="close-btn">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal4">
-                            <p>Close</p>
+                            Close
                         </button>
                     </div>
                 </div>
@@ -579,7 +731,7 @@
 
     <footer>
         <p>&#169;John Lovato</p>
-        <img src="img/bookboundLogoWhite.png" />
+        <img src="img/bookboundLogoWhite.png"  alt="Main Logo" />
         <p>All Rights Reserved</p>
     </footer>
 
