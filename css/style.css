@@ -1,7 +1,22 @@
 
+/*    Navigation   */
+/* 
+.navbar {
+    background-color: #9b1b61;
+    color:white;
+} */
 
+.nav-link {
+    color: white;
+}
 
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
 
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #e7b838;
+}
 
 
 /*      Carousel      */
@@ -58,7 +73,7 @@
 }
 
 .card-header:first-child {
-    background-color: rgb(23, 128, 226);
+    background-color: #9b1b61;
     border-radius: 40px 0 0 0;
     margin: 0;
     height: 40px;
@@ -107,7 +122,7 @@
 }
 
 .bg-today {
-    background-color: #1780e2;
+    background-color: #e7b838;
     color: white;
 }
 
@@ -116,8 +131,8 @@
     color: white;
 }
 
-.blue-legend {
-    background-color: #1780e2;
+.gold-legend {
+    background-color: #e7b838;
 }
 
 .purple-legend {
@@ -131,8 +146,8 @@
 #previous, #next {
     width: 48%;
     margin: 0 1%;
-    background-color: #1780e2;
-    border-color: #1369b9;
+    background-color: #9b1b61;
+    border: 2px solid #64113f;
     color: white;
 }
 
@@ -214,8 +229,6 @@
     color: white;
 }
 
-
-
 /*      Chat box    */
 
 .chat-hold {
@@ -291,7 +304,7 @@ ul {
 .message-form_button {
   margin: 10px;
   border-radius: 5px;
-  background-color: #1780e2;
+  background-color: #9b1b61;
   color: white;
 }
 
@@ -325,7 +338,7 @@ figcaption {
 .charity-link {
     width: 80%;
     margin: 0 10%;
-    background-color: #1780e2;
+    background-color: #9b1b61;
     color: white;
     text-align: center;
     padding: 4px;
@@ -360,6 +373,7 @@ figcaption {
 .signup {
     width: 80%;
     margin: 0 10%;
+    background-color: #9b1b61;
 }
 
 /*      Contact    */
@@ -422,7 +436,7 @@ figcaption {
 /*    Staff    */
 
 .staff-greet {
-    color: #1780e2;
+    color: #9b1b61;
     width: 100%;
     text-align: center;
 }
@@ -446,7 +460,7 @@ figcaption {
 
 .staff-name-hold {
     position: relative;
-    background-color: #1780e2;
+    background-color: #9b1b61;
     color: white;
     text-align: center;
     z-index: 2;
@@ -601,7 +615,7 @@ figcaption {
   footer {
       width: 100%;
       height: 50px;
-      background-color: #1780e2;
+      background-color: #9b1b61;
       color: white;
       display: flex;
       justify-content: space-evenly;
